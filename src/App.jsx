@@ -20,26 +20,25 @@ function App() {
     },
   ])
 
-
- 
-
   return (
-    <div style={style.container}>
-      <h1 style={style.title}>My TodoList</h1>
-      <Todos todos= {todos}/>
+    <div style={styles.container}>
+    <h1 style={styles.title}>My Todo List</h1>
+    <Todos todos={todos} />
     </div>
-  
-  )  
+  )
+
 }
 
-const style = {
+const styles = {
   container: {
-    textAlign: '12px',
+    textAlign: 'center',
     padding: '12px',
   },
   title: {
     fontSize: '36px',
   },
 }
+
+
 
 export default App
