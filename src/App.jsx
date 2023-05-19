@@ -6,24 +6,34 @@ function App() {
     {
       id: 1,
       title: 'Finish Progate React Course',
-      complement: false,
+      completed: false,
     },
     {
       id: 2,
       title: 'Have Lunch with Guru Domba',
-      complement: false,
+      completed: false,
     },
     {
       id: 3,
       title: 'Study React with Ninja Ken',
-      complement: false,
+      completed: false,
     },
   ])
+
+  const todoCompleted = (todoId) => {
+    const updatedTodos = todos.map((todo) => {
+      if (todoId === todo.id) {
+        todo.completed = !todo.completed
+      }
+      return todo
+    })
+    setTodos(updatedTodos)
+}  
 
   return (
     <div style={styles.container}>
     <h1 style={styles.title}>My Todo List</h1>
-    <Todos todos={todos} />
+    <Todos todos={todos} todoCompleted={todoCompleted}/>
     </div>
   )
 
